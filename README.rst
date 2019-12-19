@@ -1,7 +1,7 @@
 CollTools
 =========
 
-|PyPI version| |License| |Build Status| |Code Coverage|
+|PyPI version| |License| |Build Status| |Code Coverage| |Python Version| |Documentation|
 
 .. |PyPI version| image:: https://badge.fury.io/py/colltools.svg
    :target: https://badge.fury.io/py/colltools
@@ -11,3 +11,9 @@ CollTools
    :target: https://travis-ci.org/JakubTesarek/colltools
 .. |Code Coverage| image:: https://codecov.io/gh/JakubTesarek/colltools/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/JakubTesarek/colltools
+.. |Python Version| image:: https://img.shields.io/pypi/pyversions/colltools.svg
+    :target: https://pypi.org/project/colltools/
+.. |Documentation| image:: https://readthedocs.org/projects/dbgr/badge/?version=latest
+    :target: https://colltools.readthedocs.io/en/latest/
+
+
