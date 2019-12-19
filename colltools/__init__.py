@@ -14,8 +14,8 @@ def batch(iterable: Iterable[Any], step: int) -> Iterator[List[Any]]:
     """Iterate over `iterable` and group items into batches size of `step`.
 
     This method is intended to be used in cases where you need to split a stream
-    of data into batches of smaller size. Eg. When storing huge amount to database
-    in batches of 1000 items. It will create an interatore that gives you a list
+    of data into batches of smaller size. For example when storing huge amount to database
+    in batches of 1000 items. It will create an iterator that gives you a list
     of items in each iteration of size `step`. Last iteration will yield list of
     all remaining items.
 
