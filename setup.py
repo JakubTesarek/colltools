@@ -1,19 +1,30 @@
 from setuptools import setup, find_packages
-from os import path
+import os
 
 
-with open('requirements-test.txt') as fp:
-    extras_require = fp.read()
+def extras_require():
+    with open('requirements-test.txt') as fp:
+        return {'test': fp.read()}
 
-with open('README.rst') as readme:
-    long_description = readme.read()
+
+def long_description():
+    with open('README.rst') as readme:
+        return readme.read()
+
+
+def version():
+    version = os.environ.get('TRAVIS_TAG', '')
+    if not version:
+        version = os.popen('git describe --match "[0-9]*" --tags HEAD').read()
+    return version.strip()
+
 
 setup(
     name='colltools',
-    version='1.0.1',
+    version=version(),
     python_requires='>=3.6',
     description='Tools for iterating and working with collections',
-    long_description=long_description,
+    long_description=long_description(),
     long_description_content_type='text/x-rst',
     url='https://github.com/JakubTesarek/colltools',
     author='Jakub Tesárek',
@@ -26,5 +37,5 @@ setup(
     ],
     keywords='itertools collections iteration',
     packages=find_packages(),
-    extras_require={'test': extras_require}
+    extras_require=extras_require()
 )

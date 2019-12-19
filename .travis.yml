@@ -1,13 +1,22 @@
 dist: xenial
 language: python
 python:
-  - "3.7"
-  - "3.6"
+- '3.7'
+- '3.6'
 install:
-  - sudo apt-get install python-enchant
-  - pip install -r requirements-test.txt
-  - pip install .
+- sudo apt-get install python-enchant
+- pip install -r requirements-test.txt
+- pip install .
 script:
-  - make test
+- make test
+- make build
 after_success:
-  - codecov
+- codecov
+deploy:
+  provider: pypi
+  user:
+    secure: hsNfYIFuYUcgzcOHxNQol5hVofE2bBq4Z0EjunGXkL3RkDKxAuuMqkl696HoLBzOHzmnz0t9aJXHPc0xa52YEj4dBYhXu9w1RIPcdjNZxbqIIffuf7bKTRMWecgUZFRFpkP2Zb6IxbPuaIqZAmD5ZNgxp/h5UBVFPs/jV2A6sH6H+oLv4+FAOXHXtaHUbGwQxv+gScF8ttvInaDyZt7SrTChxiS+lU12+esw9v2rYBlsoie3L/LSeReltkaHp732BAlb20ut4cS1G+ip+f7aoZmT2d95Epjj2R5pDXEbFwasBAUXnyEN32Fq38aNPaJYsOoHjkEiIBFpfSLkqFwUkqzMFogW02ceTErgykhXhFGkwTwLkh8w9VlSM+0whm1okDT6OV8u95KYDHcCoBgCIcj/5IlF5704jKcg7vSucW6sOPwtTYhk6np0WBYsGfaL0xwycd1oeirng8QogqaZirIz+Ol6IJwCcNzDntrWOEG8cMsTYYXW6LliZnDiP7sTuL1uVRDdLA6rnWt17zScuV80Lho4ZxIfKoe6zArbqpm5KpybZHI8dpNULk8PwDtRf8q/dQCjfGNefnVONjjo0gyHnDLUY4GzqJNPHjSDI0TRpEksiJEIWUEwgbx24S8PIg4OtRrIG+nsKQCCUF0KePYBqXHpvAY+UNqPc0gwZSM=
+  password:
+    secure: DGlAEt7J9XWQ+JeFAnHSltaixyqU2kjUHQ7KAd4+9mr2ozxSQuj4DqGEl3cv+UmXWyplCiSURVFiTP39Z9tdudQ7rY88UQe6eHYBZipefBkFg+tgUr+k4JSdyOuWYKmOlSQpEtfH8Ie/xqThVS7o5ecU4cBK9Wes2BA73/B0rGOmquizyC6V0K5P3wmYrEjXU9BjmpZvU+g+BdfJMDTr6fnoV26wqBTw/0eMec25385c4SsBIpSVTy1RYJBZaBwTAmrb2ljqCQWNh77BIg3fpzOacKHskVsJOJJl0XQhBiGYqEK2Z69+GrM/4QujbvKHg9cOyiSUR8HVcNCrRj6zX7p+HihAHNTzwtXUB2108rJGPK+BteaKqPHco/kCCQa0Hx3DlhKeVf6wjXFr/0JmGU8uqqXTuGiEKihcUBLKSzLLwLNer2tg4gi4JQMIcJYbrU5cbCbCSoKbN0NOPrtg7Ml0KhepLICLu0XRM6Jx3t8qQE6/c2Ble6gDRAAF/EMq8g8FlE7qlq4AuHtFZqOlg5Qpa8r3zXFN0umc0kqn7LzD01ufO/ZJ3cM+FsczKFKcbMkuUH0TvRHILh8p694WR5fCvL6ekO4HhO7BaAAN2D/ixXBy3p+ihL3Fe5Qv+frL/uNmGFplKKOk16dadTVfaamnJxshS9lmco+wA6psB7o=
+  on:
+    tags: true

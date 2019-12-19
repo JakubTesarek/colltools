@@ -1,5 +1,5 @@
 all:
-	@echo 'test | clean'
+	@echo 'test | clean | build'
 
 test:
 	python -m doctest -v colltools/*.py

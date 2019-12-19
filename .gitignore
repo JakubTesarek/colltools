@@ -3,5 +3,5 @@
 .pytest_cache
 htmlcov
 build
-dbgr.egg-info
+colltools.egg-info
 dist
