@@ -24,6 +24,7 @@ deploy:
       condition: $TRAVIS_PYTHON_VERSION = 3.6
   - provider: releases
     skip_cleanup: true
+    overwrite: true
     api_key:
       secure: vD9KrxrZ4yL0nMn6kz5qzsLJXkQNA1A89OdAaq2ISVYVrsRrBl/qDp/fwx4yUU2ROfk35F0FmFDaZBJKhF0u8i0+DOicxVpzb5kwhmG9UKYtMNwpBrptyegOAn5wESKcSWMWG39iY8JHEbeB+pFHmmcKaAKT5rJWSsBWQUpyvuXdG+Yr5r8WMU2a/6hG1K6CHrGmvUiu/ElHd0WIUics6OtEEz6/y+3ZB+BZ7Xnbk55a9Ds0jaDVMEsTmFKG+nQCWNhRDaLkTcYr/K+z0TXRmIbqDKSysWXt1rQiHueOM4lh7cMn5bg3IoRgN5ZJJvkg9kvD+4sefkQ6/ZLZZuoA/bgtCUO7V4bpcSG/nnltZ8yo8hyQPscRUh4PVGWimzJOT2qyTslQ6Mz1Eis9yFCGT3WgziCV63Ehz6GQGs2vtuWkbicb9329Sqm5ZzMGQ41Kug31Kx2blKN7kqiFnQhSdE6n+/xAh0D8tCvZaxBcgiS7JPjmjC4hbvYeM7XvulzuC1nEdcjBdQc9TGzEcaShqzWIA0NcRbWHHwt5Q8xVLiOp8HTXZnQP7YyjOeKsGvkYGUL3dlZ0uNCQdfEQDav+A4Wf5CksMgmJkr3pFt0y9QZ44tf2SVTQNGGNSslMTcEXgB271NLQxMJi4MKP19renyuuw/DGtUwR7tE0RbkZHpg=
     file_glob: true
