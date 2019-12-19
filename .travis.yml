@@ -1,0 +1,13 @@
+dist: xenial
+language: python
+python:
+  - "3.7"
+  - "3.6"
+install:
+  - sudo apt-get install python-enchant
+  - pip install -r requirements-dev.txt
+  - pip install .
+script:
+  - make test
+after_success:
+  - codecov

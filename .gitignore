@@ -1,3 +1,7 @@
 .mypy_cache
 .coverage
 .pytest_cache
+htmlcov
+build
+dbgr.egg-info
+dist
