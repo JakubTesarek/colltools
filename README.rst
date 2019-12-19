@@ -16,4 +16,22 @@ CollTools
 .. |Documentation| image:: https://readthedocs.org/projects/dbgr/badge/?version=latest
     :target: https://colltools.readthedocs.io/en/latest/
 
+CollTools provides functions to iterate over collections in specialized manner
+not currently supported by `standard Python library`_.
 
+.. _standard python library:
+    https://docs.python.org/3.6/library/itertools.html
+
+Installation
+------------
+The easiest way to install CollTools is from `PyPi`_.
+
+.. _pypi: https://pypi.org/project/colltools/
+
+.. code-block:: python
+
+    pip install colltools
+
+Documentation
+-------------
+Full documentation is available at https://colltools.readthedocs.io/en/latest/
