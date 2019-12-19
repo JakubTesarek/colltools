@@ -1,3 +1,4 @@
+os: linux
 dist: xenial
 language: python
 python:
@@ -14,8 +15,7 @@ after_success:
 - codecov
 deploy:
   - provider: pypi
-    skip_cleanup: true
-    user:
+    username:
       secure: hsNfYIFuYUcgzcOHxNQol5hVofE2bBq4Z0EjunGXkL3RkDKxAuuMqkl696HoLBzOHzmnz0t9aJXHPc0xa52YEj4dBYhXu9w1RIPcdjNZxbqIIffuf7bKTRMWecgUZFRFpkP2Zb6IxbPuaIqZAmD5ZNgxp/h5UBVFPs/jV2A6sH6H+oLv4+FAOXHXtaHUbGwQxv+gScF8ttvInaDyZt7SrTChxiS+lU12+esw9v2rYBlsoie3L/LSeReltkaHp732BAlb20ut4cS1G+ip+f7aoZmT2d95Epjj2R5pDXEbFwasBAUXnyEN32Fq38aNPaJYsOoHjkEiIBFpfSLkqFwUkqzMFogW02ceTErgykhXhFGkwTwLkh8w9VlSM+0whm1okDT6OV8u95KYDHcCoBgCIcj/5IlF5704jKcg7vSucW6sOPwtTYhk6np0WBYsGfaL0xwycd1oeirng8QogqaZirIz+Ol6IJwCcNzDntrWOEG8cMsTYYXW6LliZnDiP7sTuL1uVRDdLA6rnWt17zScuV80Lho4ZxIfKoe6zArbqpm5KpybZHI8dpNULk8PwDtRf8q/dQCjfGNefnVONjjo0gyHnDLUY4GzqJNPHjSDI0TRpEksiJEIWUEwgbx24S8PIg4OtRrIG+nsKQCCUF0KePYBqXHpvAY+UNqPc0gwZSM=
     password:
       secure: DGlAEt7J9XWQ+JeFAnHSltaixyqU2kjUHQ7KAd4+9mr2ozxSQuj4DqGEl3cv+UmXWyplCiSURVFiTP39Z9tdudQ7rY88UQe6eHYBZipefBkFg+tgUr+k4JSdyOuWYKmOlSQpEtfH8Ie/xqThVS7o5ecU4cBK9Wes2BA73/B0rGOmquizyC6V0K5P3wmYrEjXU9BjmpZvU+g+BdfJMDTr6fnoV26wqBTw/0eMec25385c4SsBIpSVTy1RYJBZaBwTAmrb2ljqCQWNh77BIg3fpzOacKHskVsJOJJl0XQhBiGYqEK2Z69+GrM/4QujbvKHg9cOyiSUR8HVcNCrRj6zX7p+HihAHNTzwtXUB2108rJGPK+BteaKqPHco/kCCQa0Hx3DlhKeVf6wjXFr/0JmGU8uqqXTuGiEKihcUBLKSzLLwLNer2tg4gi4JQMIcJYbrU5cbCbCSoKbN0NOPrtg7Ml0KhepLICLu0XRM6Jx3t8qQE6/c2Ble6gDRAAF/EMq8g8FlE7qlq4AuHtFZqOlg5Qpa8r3zXFN0umc0kqn7LzD01ufO/ZJ3cM+FsczKFKcbMkuUH0TvRHILh8p694WR5fCvL6ekO4HhO7BaAAN2D/ixXBy3p+ihL3Fe5Qv+frL/uNmGFplKKOk16dadTVfaamnJxshS9lmco+wA6psB7o=
@@ -23,9 +23,8 @@ deploy:
       tags: true
       condition: $TRAVIS_PYTHON_VERSION = 3.6
   - provider: releases
-    skip_cleanup: true
     overwrite: true
-    api_key:
+    token:
       secure: vD9KrxrZ4yL0nMn6kz5qzsLJXkQNA1A89OdAaq2ISVYVrsRrBl/qDp/fwx4yUU2ROfk35F0FmFDaZBJKhF0u8i0+DOicxVpzb5kwhmG9UKYtMNwpBrptyegOAn5wESKcSWMWG39iY8JHEbeB+pFHmmcKaAKT5rJWSsBWQUpyvuXdG+Yr5r8WMU2a/6hG1K6CHrGmvUiu/ElHd0WIUics6OtEEz6/y+3ZB+BZ7Xnbk55a9Ds0jaDVMEsTmFKG+nQCWNhRDaLkTcYr/K+z0TXRmIbqDKSysWXt1rQiHueOM4lh7cMn5bg3IoRgN5ZJJvkg9kvD+4sefkQ6/ZLZZuoA/bgtCUO7V4bpcSG/nnltZ8yo8hyQPscRUh4PVGWimzJOT2qyTslQ6Mz1Eis9yFCGT3WgziCV63Ehz6GQGs2vtuWkbicb9329Sqm5ZzMGQ41Kug31Kx2blKN7kqiFnQhSdE6n+/xAh0D8tCvZaxBcgiS7JPjmjC4hbvYeM7XvulzuC1nEdcjBdQc9TGzEcaShqzWIA0NcRbWHHwt5Q8xVLiOp8HTXZnQP7YyjOeKsGvkYGUL3dlZ0uNCQdfEQDav+A4Wf5CksMgmJkr3pFt0y9QZ44tf2SVTQNGGNSslMTcEXgB271NLQxMJi4MKP19renyuuw/DGtUwR7tE0RbkZHpg=
     file_glob: true
     file: dist/*
