@@ -30,7 +30,7 @@ The easiest way to install CollTools is from `PyPi`_.
 
 .. code-block:: python
 
-    pip install colltools
+    $ pip install colltools
 
 Documentation
 -------------
