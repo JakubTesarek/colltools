@@ -13,7 +13,7 @@ CollTools
    :target: https://codecov.io/gh/JakubTesarek/colltools
 .. |Python Version| image:: https://img.shields.io/pypi/pyversions/colltools.svg
     :target: https://pypi.org/project/colltools/
-.. |Documentation| image:: https://readthedocs.org/projects/dbgr/badge/?version=latest
+.. |Documentation| image:: https://readthedocs.org/projects/colltools/badge/?version=latest
     :target: https://colltools.readthedocs.io/en/latest/
 
 CollTools provides functions to iterate over collections in specialized manner
