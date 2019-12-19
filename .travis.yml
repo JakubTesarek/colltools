@@ -5,7 +5,7 @@ python:
   - "3.6"
 install:
   - sudo apt-get install python-enchant
-  - pip install -r requirements-dev.txt
+  - pip install -r requirements-test.txt
   - pip install .
 script:
   - make test
