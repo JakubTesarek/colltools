@@ -1,19 +1,24 @@
+proj_dir = colltools
+
 all:
 	@echo 'test | clean | build | doc'
 
 test:
-	python -m doctest -v colltools/*.py
+	python -m doctest -v $(proj_dir)/*.py
 	py.test tests \
-		--cov colltools \
+		--cov $(proj_dir) \
 		--cov-report html \
 		--cov-report term \
 		--cov-fail-under=100
-	pylint colltools
-	mypy colltools
+	pylint $(proj_dir)
+	mypy $(proj_dir)
 
 clean:
 	rm -rf *.pyc __pycache__
-	rm -rf colltools.egg-info build dist
+	rm -rf $(proj_dir).egg-info build dist
+	rm -rf .mypy_cache
+	rm -rf .pytest_cache
+	rm -rf htmlcov .coverage
 	cd docs && $(MAKE) clean
 
 
