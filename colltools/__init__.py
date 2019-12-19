@@ -16,15 +16,14 @@ def batch(iterable: Iterable[Any], step: int) -> Iterator[List[Any]]:
     This method is intended to be used in cases where you need to split a stream
     of data into batches of smaller size. Eg. When storing huge amount to database
     in batches of 1000 items. It will create an interatore that gives you a list
-    of items in each iteration of size `step`. Last item will containt list of
+    of items in each iteration of size `step`. Last iteration will yield list of
     all remaining items.
 
     Example:
-        >>> for i in batch(range(10), 3): print(i)
+        >>> for i in batch(range(8), 3): print(i)
         [0, 1, 2]
         [3, 4, 5]
-        [6, 7, 8]
-        [9]
+        [6, 7]
     """
     if not isinstance(step, int):
         raise TypeError(f'Step has to be an integer. {type(step)} given.')

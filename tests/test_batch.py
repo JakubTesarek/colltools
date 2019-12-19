@@ -4,7 +4,7 @@ from colltools import batch
 
 def test_empty_iterable():
     for i in batch([], 5):
-        assert False
+        pytest.xfail('Batching empty list should not provide items')
     else:
         assert True
 
