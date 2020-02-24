@@ -94,3 +94,7 @@ class NameRegistry:
     def __repr__(self) -> str:
         """ Returns string representation of an instance. """
         return f'<{self.__class__.__name__}:{self.name}>'
+
+    def __str__(self) -> str:
+        """ Convert registry to string """
+        return self.name

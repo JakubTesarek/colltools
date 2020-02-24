@@ -63,15 +63,22 @@ def test_cascade():
     assert set(Registry3.__members__.keys()) == set(['zzz'])
 
 
-def test_repr():
-    class Registry(NameRegistry):
-        __values__ = ['xxx']
-
-    assert repr(Registry.get('xxx')) == '<Registry:xxx>'
-
-
 def test_name_attribute():
     class Registry(NameRegistry):
         __values__ = ['xxx']
 
     assert Registry.get('xxx').name == 'xxx'
+
+
+def test_to_string():
+    class Registry(NameRegistry):
+        __values__ = ['xxx']
+
+    assert str(Registry.get('xxx')) == 'xxx'
+
+
+def test_repre():
+    class Registry(NameRegistry):
+        __values__ = ['xxx']
+
+    assert repr(Registry.get('xxx')) == '<Registry:xxx>'
