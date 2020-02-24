@@ -38,6 +38,17 @@ setup(
         'Programming Language :: Python :: 3.7'
     ],
     keywords='itertools collections iteration',
+    include_package_data=True,
     packages=find_packages(),
-    extras_require=extras_require()
+    extras_require={
+        'test': [
+            'pytest',
+            'pytest-cov',
+            'codecov',
+            'mypy',
+            'pylint',
+            'sphinx',
+            'sphinxcontrib-spelling'
+        ]
+    }
 )
