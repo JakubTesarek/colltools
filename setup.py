@@ -2,11 +2,6 @@ from setuptools import setup, find_packages
 import os
 
 
-def extras_require():
-    with open('requirements-test.txt') as fp:
-        return {'test': fp.read()}
-
-
 def long_description():
     with open('README.rst') as readme:
         return readme.read()
