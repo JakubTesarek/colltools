@@ -1,5 +1,5 @@
-Functions
-=========
+Features
+========
 
 .. automodule:: colltools
    :members:
